@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-96x96.png" type="image/x-icon">
+    <title>O Método Barsi</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <script src="script/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="barra-cronometro">
+            <div class="container1">
+                <div class="caixa1">
+                    <div class="caixa2">
+                        <div class="logo"><img width="438" height="48" src="./imagens/logo-agf-grupo-primo.webp"
+                                alt="O Método Barsi">
+                        </div>
+                        <div class="box-contador">
+                            <div class="conteudocont">
+                                <p id="titulo-cronometro">A Aula Magna começa em:</p>
+                                <div class="newdiv">
+                                    <div class="customcount">
+                                        <div class="numero">
+                                            <div id="days">00</div>
+                                        </div>
+                                        <div class="texttimer">dias</div>
+                                    </div>
+                                    <div class="pinkdot"></div>
+                                    <div class="customcount">
+                                        <div class="numero">
+                                            <div id="hours">00</div>
+                                        </div>
+                                        <div class="texttimer">horas</div>
+                                    </div>
+                                    <div class="pinkdot"></div>
+                                    <div class="customcount">
+                                        <div class="numero">
+                                            <div id="minutes">00</div>
+                                        </div>
+                                        <div class="texttimer">min</div>
+                                    </div>
+                                    <div class="pinkdot"></div>
+                                    <div class="customcount">
+                                        <div class="numero">
+                                            <div id="seconds">00</div>
+                                        </div>
+                                        <div class="texttimer">seg</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="caixa3">
+                <div class="container-left">
+                    <p>Aula Magna <span>gratuita</span>
+                        <img id="imagem1" src="./imagens/icon-data2.webp" width="248" height="44" alt="01/08 a 08/08">
+                    </p>
+                    <img id="imagem2" src="./imagens/logo-o-metodo.webp" width="318" height="136" alt="O Método Barsi">
+                    <h1>Luiz Barsi é o maior e <span>mais bem-sucedido</span> investidor pessoa física da
+                        Bolsa brasileira. Nessa <span>Aula Magna online e gratuita</span>, que marca o
+                        lançamento de um novo MBA, ele vai ensinar a você as técnicas que usa para
+                        <span>identificar as grandes barganhas da Bolsa</span>.
+                    </h1>
+                </div>
+                <div class="container-right">
+                    <div class="box-formulario" id="formulario">
+                        <h2 class="titulo-fomulario">Sim, quero aprender Value<br>Investing com o
+                            Barsi!
+                        </h2>
+                        <form>
+                            <div class="form-input"><input type="text" class="text-field-2 w-input" maxlength="256"
+                                    name="nome" data-name="nome" placeholder="Seu nome*" id="fullname" required="true">
+                            </div>
+                            <div class="form-input"><input type="email" class="text-field-2 w-input" maxlength="256"
+                                    name="e-mail" data-name="e-mail" placeholder="Seu melhor e-mail*" id="email"
+                                    required="true">
+                            </div>
+                            <div class="form-input telefone"><input type="tel" class="text-field-3 w-input"
+                                    maxlength="256" name="phone" data-name="phone" placeholder="Seu Whatsapp com DDD"
+                                    id="phone" class="phone" required="true">
+                            </div>
+                            <button type="submit" title="Sim, quero aprender o Método Barsi!">"Sim, quero aprender o
+                                Método Barsi!</button>
+                            <p class="msg-policy">Ao clicar no botão "Sim, quero aprender o Método Barsi!", você aceita
+                                nossos <a href="privacy.html" class="stylelink" rel="noopener" target="_blank">Termos de
+                                    Uso &
+                                    Politica
+                                    de
+                                    privacidade</a> e receber informações por e-mail.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-contador" id="box-contador-mobile">
+            <div class="conteudocont">
+                <p id="titulo-cronometro">A Aula Magna começa em:</p>
+                <div class="newdiv">
+                    <div class="customcount">
+                        <div class="numero">
+                            <div id="daysm">00</div>
+                        </div>
+                        <div class="texttimer">dias</div>
+                    </div>
+                    <div class="pinkdot"></div>
+                    <div class="customcount">
+                        <div class="numero">
+                            <div id="hoursm">00</div>
+                        </div>
+                        <div class="texttimer">horas</div>
+                    </div>
+                    <div class="pinkdot"></div>
+                    <div class="customcount">
+                        <div class="numero">
+                            <div id="minutesm">00</div>
+                        </div>
+                        <div class="texttimer">min</div>
+                    </div>
+                    <div class="pinkdot"></div>
+                    <div class="customcount">
+                        <div class="numero">
+                            <div id="secondsm">00</div>
+                        </div>
+                        <div class="texttimer">seg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="conteudo">
+            <div class="container3">
+                <h2>Anote na sua agenda</h2>
+                <div class="caixas">
+                    <div class="caixaconteudo">
+                        <div class="item">
+                            <p class="data"><img class="imagem-calendario" src="./imagens/icon-calendario.webp"
+                                    width="29" height="28" alt="Aula 1"> 01/08</p>
+                            <img class="imagem-agenda" src="./imagens/icon-agenda01.webp" width="120" height="120"
+                                alt="Aula 1">
+                            <h2>Aula 1</h2>
+                            <p>Value Investing:<br>Compre R$ 1 em ações pagando só R$ 0,50</p>
+                        </div>
+                    </div>
+                    <div class="caixaconteudo">
+                        <div class="item">
+                            <p class="data"><img class="imagem-calendario" src="./imagens/icon-calendario.webp"
+                                    width="29" height="28" alt="Aula 2"> 03/08</p>
+                            <img class="imagem-agenda" src="./imagens/icon-agenda02.webp" width="120" height="120"
+                                alt="Aula 2">
+                            <h2>Aula 2</h2>
+                            <p class="info">Luiz Barsi e a bola de neve dos dividendos</p>
+                        </div>
+                    </div>
+                    <div class="caixaconteudo">
+                        <div class="item">
+                            <p class="data"><img class="imagem-calendario" src="./imagens/icon-calendario.webp"
+                                    width="29" height="28" alt="Aula 3"> 05/08</p>
+                            <img class="imagem-agenda" src="./imagens/icon-agenda03.webp" width="120" height="120"
+                                alt="Aula 3">
+                            <h2>Aula 3</h2>
+                            <p class="info">Como Barsi ganhou quase R$ 2 bi com uma só empresa</p>
+                        </div>
+                    </div>
+                    <div class="caixaconteudo">
+                        <div class="item">
+                            <p class="data"><img class="imagem-calendario" src="./imagens/icon-calendario.webp"
+                                    width="29" height="28" alt="Aula 4"> 08/08</p>
+                            <img class="imagem-agenda" src="./imagens/icon-agenda04.webp" width="120" height="120"
+                                alt="Aula 4">
+                            <h2>Aula 4</h2>
+                            <p class="info">Comece a selecionar ações como um profissional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="button" title="Quero participar dessa Aula Magna" href="#formulario"><span>Quero participar dessa
+                    Aula Magna</span>
+            </a>
+        </section>
+        <section class="inscricao">
+            <div class="container4">
+                <div class="container-background">
+                    <div class="container5">
+                        <div class="container6">
+                            <img class="imagem3" src="./imagens/icon-box.webp" width="190" height="200"
+                                alt="Ao final dessa Aula Magna, serão abertas as inscrições para a turma inaugural do MBA em Value Investing com Luiz Barsi. Prepare-se!">
+                            <p>Ao final dessa Aula Magna, serão abertas as inscrições para a turma inaugural do MBA em
+                                Value Investing com Luiz Barsi. Prepare-se!</p>
+                            <a class="button" title="Quero participar dessa Aula Magna" href="#formulario"><span>Quero
+                                    participar dessa Aula Magna </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pub-alvo">
+            <div class="container7">
+                <div class="container8">
+                    <div class="container9">
+                        <div class="container-left2">
+                            <h2>Essa Aula Magna é para pessoas que querem:</h2>
+                        </div>
+                        <div class="container-right2">
+                            <ul>
+                                <li>
+                                    <p>Aprender a construir patrimônio para viver só da renda de seus investimentos</p>
+                                </li>
+                                <li>
+                                    <p>Trabalhar no mercado financeiro como analista de investimentos</p>
+                                </li>
+                                <li>
+                                    <p>Conseguir um emprego em corretoras, casas de research ou gestoras de fundos</p>
+                                </li>
+                                <li>
+                                    <p>Abrir um clube de investimentos ou atuar como consultor independente</p>
+                                </li>
+                                <li>
+                                    <p>Trabalhar com alocação de recursos ou ajudando outras pessoas a investir melhor
+                                    </p>
+                                </li>
+                            </ul>
+                            <a class="button" title="Sim, quero aprender o Método Barsi!" href="#formulario"><span>Sim,
+                                    quero aprender o
+                                    Método
+                                    Barsi!</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <article class="barsi">
+            <div class="container10">
+                <div class="container11">
+                    <div class="container12">
+                        <h2>Com quem vou aprender</h2>
+                    </div>
+                    <div class="container13">
+                        <div class="container-left3">
+                            <img src="./imagens/barsi.webp" width="488" height="515" alt="Luiz Barsi" class="imagem4">
+                        </div>
+                        <div class="container-right3">
+                            <h3>Luiz Barsi</h3>
+                            <p>Economista, advogado e maior investidor pessoa física do Brasil. Aos 6 anos começou a
+                                trabalhar, foi engraxate e vendeu balas no cinema.</p>
+                            <p>Sua relação com o Mercado Financeiro começou através de uma vaga de emprego em uma
+                                corretora de valores mobiliários nos anos 70, influenciado também pela sua formação
+                                técnica em contabilidade e sua experiência como auditor de empresas.</p>
+                            <p>No fim da década de 70 publicou o estudo original "Ações Garantem o Futuro”, que hoje
+                                norteia o trabalho realizado pelo AGF. Tornou-se bilionário investindo na Bolsa e hoje é
+                                conselheiro em diversas empresas, como a Unipar Carbocloro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="professores">
+            <div class="container14">
+                <div class="container15">
+                    <div class="container16">
+                        <div class="container17">
+                            <img class="lazyload" src="./imagens/time-metodo-barsi.webp" width="1220" height="743"
+                                alt="Time Luiz Barsi">
+                        </div>
+                    </div>
+                    <div class="container18">
+                        <div class="coluna">
+                            <div class="container19">
+                                <h2>Louise Barsi</h2>
+                                <p>Economista, analista CNPI e uma das fundadoras da empresa de educação digital Ações
+                                    Garantem o Futuro (AGF). Além de ensinar sobre como investir na Bolsa, Louise Barsi
+                                    é conselheira de empresas.</p>
+                                <p>Na Eternit (ETER3), faz parte do conselho de administração. No Santander (SANB11),
+                                    AES Brasil (AESB3) e na Klabin (KLBN4), tem um assento no conselho fiscal. Também já
+                                    foi do conselho fiscal da Unipar e da Enel.</p>
+                            </div>
+                        </div>
+                        <div class="coluna">
+                            <div class="container19">
+                                <h2>Fabio Baroni</h2>
+                                <p>Empresário desde os 16 anos, se aventurou no Mercado Financeiro como day trader e
+                                    quebrou. Só após conhecer a metodologia de Luiz Barsi, conseguiu entender como
+                                    montar uma carteira focada no futuro.</p>
+                                <p>Em menos de uma década, aos 27 anos de idade, alcançou a liberdade financeira. Hoje é
+                                    um dos sócios-fundadores do AGF, onde ensina o método Barsi a milhares de pessoas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="coluna">
+                            <div class="container19">
+                                <h2>Felipe Ruiz</h2>
+                                <p>Investidor desde 1999, é engenheiro de produção e possui MBA pelo MIT (Massachusetts
+                                    Institute of Technology). Atualmente atua nos conselhos da Unipar (UNIP6), Eternit
+                                    (ETER3) e Paranapanema (PMAM3).</p>
+                                <p>Antes de fundar o AGF com os sócios, foi diretor na RBI, holding do fundo 3G dona do
+                                    Burger King. Atuou como consultor em estratégia na Booz & Company e para fundos de
+                                    investimentos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer class="footer">
+            <div class="container20">
+                <div class="container21">
+                    <div class="container22">
+                        <div class="container23">
+                            <img class="imagem5" src="./imagens/logo-agf-grupo-primo.webp" width="438" height="48"
+                                alt="Grupo Primo">
+                        </div>
+                        <div class="container24">
+                            <p>
+                                © Copyright 2022 AGF | Grupo Primo. Todos os direitos reservados.<br><small
+                                    style="font-size: 9px;   position: relative;   bottom: -3px;">O PRIMO RICO
+                                    MÍDIA, EDUCACIONAL E PARTICIPAÇÕES LTDA - 35.784.233/0001-07</small><br><a
+                                    style="font-size: 9px; color: #fff; text-decoration: none;" href="privacy.html"
+                                    target="_blank" rel="noopener" title="Política de privacidade">Política de
+                                    privacidade </a><span style="font-size: 8px;">| </span><a
+                                    style="font-size: 9px; color: #fff; text-decoration: none;"
+                                    href="https://privacy.oprimorico.com.br/_f/" rel="noopener" target="_blank"
+                                    title="Proteja sua privacidade">Proteja sua privacidade </a><span
+                                    style="font-size: 8px;">| </span><a
+                                    style="font-size: 9px; color: #fff; text-decoration: none;"
+                                    href="javascript:window.primoprivacy.consentBanner.showSettings(0);"
+                                    title="Preferências de Cookies">Preferências de Cookies</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </footer>
+    </main>
+    <footer id="rodape">
+        <p>Todos os direitos reservados | Desenvolvido por <a href="https://www.instagram.com/joao.luisrm/"
+                target="_blank" class="externo">@joao.luisrm</a></p>
+    </footer>
+</body>
+
+</html>

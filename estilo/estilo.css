@@ -1,0 +1,2742 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Exo-Regular';
+    font-display: swap;
+    src: url(../fontes/Exo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Exo-Light';
+    font-display: swap;
+    src: url(../fontes/Exo-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Exo-Bold';
+    font-display: swap;
+    src: url(../fontes/Exo-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Exo-Black';
+    font-display: swap;
+    src: url(../fontes/Exo-Black.ttf);
+}
+
+:root {
+    --cor0: #fff;
+    --cor1: #0f1014;
+    --cor2: #05070b;
+    --cor3: #e0e3ea;
+    --cor4: #bd2475;
+    --cor5: #ededed;
+    --cor6: #042521;
+    --cor7: #3dffa8;
+    --cor8: #000;
+
+    --fonte-padrão: 'Arial, Verdana, Helvetica, sans-serif';
+    --fonte1: 'Exo-Regular';
+    --fonte2: 'Exo-Light';
+    --fonte3: 'Exo-Bold';
+    --fonte5: 'Exo-Black';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* outline: 1px solid red !important; */
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* button {
+    font-family: var(--fonte3);
+    font-size: 24px;
+    color: var(--cor0);
+    background-color: var(--cor4);
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    display: block;
+}
+
+button:hover {
+    color: var(--cor0);
+    background-color: var(--cor8);
+    transition: 0.2s;
+} */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cor2);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor7);
+    border-radius: 10px;
+}
+
+body {
+    max-width: 1366px;
+    margin: auto;
+    background-color: var(--cor1);
+}
+
+header .barra-cronometro {
+    background-color: var(--cor1);
+    border: 1px solid rgba(255, 255, 255, .15);
+    width: 100%;
+    height: 101px;
+}
+
+header .barra-cronometro .container1 {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+header .barra-cronometro .container1 .caixa1 {
+    align-items: center;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 .logo {
+    width: auto;
+    display: table;
+    float: left;
+    margin: 32px 0 0 0;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 .logo img {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    margin-left: 9px;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador {
+    width: 100%;
+    float: right;
+    max-width: 627px;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont p#titulo-cronometro {
+    font-family: var(--fonte1);
+    font-size: 24px;
+    line-height: 22px;
+    float: left;
+    color: var(--cor3);
+    text-align: right;
+    margin-top: 36px;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont .newdiv {
+    width: auto;
+    display: flex;
+    float: right;
+    margin: 18px 6px 0px 0px;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont .newdiv .customcount {
+    font-family: var(--fonte2);
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--cor5);
+    width: 100%;
+    text-align: center;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont .newdiv .customcount .texttimer {
+    margin-top: -7px;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont .newdiv .customcount .numero {
+    font-family: var(--fonte3);
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: var(--cor5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+}
+
+header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont .newdiv .pinkdot {
+    display: inline-block;
+    background-color: var(--cor4);
+    width: 30px;
+    height: 8px;
+    border-radius: 2px;
+    margin: 24px 0px 0px 0px;
+}
+
+header .container2 {
+    background-image: url(../imagens/bg-topo.webp);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    padding-bottom: 255px;
+    background-color: var(--cor2);
+}
+
+header .container2 .caixa3 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 100%;
+    max-width: 1125px;
+}
+
+header .container2 .caixa3 .container-left {
+    width: 50%;
+    float: left;
+    color: var(--cor0);
+}
+
+header .container2 .caixa3 .container-left p {
+    font-family: var(--fonte2);
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 49px 0px 0px 14px;
+}
+
+header .container2 .caixa3 .container-left p span {
+    font-family: var(--fonte3);
+}
+
+header .container2 .caixa3 .container-left img#imagem1 {
+    vertical-align: middle;
+}
+
+header .container2 .caixa3 .container-left img#imagem2 {
+    margin: 28px 0px;
+}
+
+header .container2 .caixa3 .container-left img#imagem2,
+h1 {
+    margin-left: 14px;
+}
+
+header .container2 .caixa3 .container-left h1 {
+    font-family: var(--fonte2);
+    font-size: 20px;
+    width: 100%;
+    max-width: 500px;
+    line-height: 24px;
+    margin-bottom: 74px;
+}
+
+header .container2 .caixa3 .container-left h1 span {
+    font-family: var(--fonte3);
+}
+
+header .container2 .caixa3 .container-right {
+    width: 50%;
+    float: right;
+}
+
+header .container2 .caixa3 .container-right .box-formulario {
+    background: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    padding: 45px;
+    width: 534px;
+    height: 100%;
+    margin: 0px 14px 0px 14px;
+}
+
+header .container2 .caixa3 .container-right .box-formulario h2 {
+    font-family: var(--fonte3);
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: var(--cor0);
+    margin-bottom: 22px;
+}
+
+header .container2 .caixa3 .container-right .box-formulario form input {
+    font-family: var(--fonte1);
+    background: #fff;
+    color: #000;
+    border: 0;
+    width: 100%;
+    padding: 13.5px;
+    font-size: 16px;
+    margin: 0 auto 20px;
+    display: table;
+    outline: 0;
+    border-radius: 6px;
+}
+
+header .container2 .caixa3 .container-right .box-formulario form button {
+    font-family: var(--fonte5);
+    font-size: 20px;
+    color: var(--cor6);
+    line-height: 24px;
+    letter-spacing: .01em;
+    text-align: center;
+    background: #3dffa8;
+    background: linear-gradient(90deg, #3dffa8 0, #3dffa8 100%);
+    letter-spacing: .01em;
+    box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+    border-radius: 6px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 5px 10px 5px;
+    cursor: pointer;
+    margin: 20px auto 10px;
+    border: 1px solid #3dffa8;
+    width: 100%;
+    transition: all .2s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container2 .caixa3 .container-right .box-formulario form button:hover {
+    transition: all 200ms ease-in 0ms;
+    color: #3dffa8;
+    border: 1px solid #3dffa8;
+    background: #000;
+    background: linear-gradient(277deg, #000 0, #000 100%);
+}
+
+header .container2 .caixa3 .container-right .box-formulario form p {
+    font-family: var(--fonte1);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    margin: 15px auto 0;
+    line-height: 18px;
+    width: 100%;
+    max-width: 430px;
+}
+
+header .container2 .caixa3 .container-right .box-formulario form p a.stylelink {
+    color: #aeb8cd;
+    text-align: center;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+header .box-contador#box-contador-mobile {
+    display: none;
+}
+
+main .conteudo .container3 h2 {
+    font-family: var(--fonte3);
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: 0.5px;
+    color: var(--cor0);
+    width: 100%;
+    max-width: 90%;
+    margin: 99px auto 49px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main .conteudo .container3 .caixas {
+    margin: 5px auto 0px;
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .conteudo .container3 .caixas .caixaconteudo {
+    background-image: url(../imagens/bg-agenda.webp);
+    width: 261px;
+    display: table;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    border-radius: 6px;
+    margin: 0px 12px;
+}
+
+main .conteudo .container3 .caixas .caixaconteudo .item {
+    width: 261px;
+    height: 335px;
+}
+
+main .conteudo .container3 .caixas .caixaconteudo .item p.data {
+    font-family: var(--fonte3);
+    background: linear-gradient(137deg, #03120b 15%, #268f5f 49%, #03120b 85%);
+    border: 0.5px solid rgba(255, 255, 255, .3);
+    border-radius: 2px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    width: 85%;
+    margin: 20px auto 0;
+    display: table;
+    text-align: center;
+    padding: 10px;
+    width: 220px;
+}
+
+main .conteudo .container3 .caixas .caixaconteudo .item p .imagem-calendario {
+    vertical-align: middle;
+}
+
+main .conteudo .container3 .caixas .caixaconteudo .item .imagem-agenda {
+    margin: 10px 70px 0px 70px;
+}
+
+main .conteudo .container3 .caixas .caixaconteudo .item h2 {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+main .conteudo .container3 .caixas .caixaconteudo .item p {
+    font-family: var(--fonte1);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: .01em;
+    color: #fff;
+    margin: 15px auto 34px;
+    max-width: 85%;
+}
+
+main section .button {
+    font-family: var(--fonte3);
+    width: 90%;
+    max-width: 592px;
+    background: #3dffa8;
+    box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 27px;
+    color: #0f1014;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 10px;
+    display: block;
+    margin: 32px auto 98px;
+    transition: all .3s ease-in;
+    border: 1px solid #3dffa8;
+    cursor: pointer;
+}
+
+main section .button:hover {
+    transition: all .3s ease-in;
+    color: #3dffa8;
+    border: 1px solid #3dffa8;
+    background: #000;
+    background: -moz-linear-gradient(277deg, #000 0, #000 100%);
+    background: -webkit-linear-gradient(277deg, #000 0, #000 100%);
+    background: linear-gradient(277deg, #000 0, #000 100%);
+}
+
+main .inscricao {
+    display: block;
+}
+
+main .inscricao .container4 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0px 83px;
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+main .inscricao .container4 .container-background {
+    background-image: url(../imagens/bg-aula-magna.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+}
+
+main .inscricao .container4 .container5 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .inscricao .container4 .container5 .container6 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+main .inscricao .container4 .container5 .container6 .imagem3 {
+    display: table;
+    margin: 0 auto;
+}
+
+main .inscricao .container4 .container5 .container6 p {
+    font-family: var(--fonte3);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto 30px;
+}
+
+main .inscricao .container4 .container5 .container6 .button {
+    font-family: var(--fonte3);
+    width: 90%;
+    max-width: 592px;
+    background: #bd2475;
+    box-shadow: 0 100px 80px rgb(189 36 117 / 18%), 0 41.7776px 33.4221px rgb(189 36 117 / 13%), 0 22.3363px 17.869px rgb(189 36 117 / 11%), 0 12.5216px 10.0172px rgb(189 36 117 / 9%), 0 6.6501px 5.32008px rgb(189 36 117 / 7%), 0 2.76726px 2.21381px rgb(189 36 117 / 5%);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #ffff;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 10px;
+    margin: 32px auto 80px;
+    transition: all .3s ease-in;
+    border: 1px solid #bd2475;
+    cursor: pointer;
+    width: 100%;
+    display: table;
+}
+
+main .inscricao .container4 .container5 .container6 .button:hover {
+    transition: all .3s ease-in;
+    color: #3dffa8;
+    border: 1px solid #3dffa8;
+    background: #000;
+    background: -moz-linear-gradient(277deg, #000 0, #000 100%);
+    background: -webkit-linear-gradient(277deg, #000 0, #000 100%);
+    background: linear-gradient(277deg, #000 0, #000 100%);
+}
+
+main .pub-alvo {
+    display: block;
+}
+
+main .pub-alvo .container7 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+main .pub-alvo .container7 .container8 {
+    width: 1140px;
+    margin: auto;
+}
+
+main .pub-alvo .container7 .container8 .container9 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .pub-alvo .container7 .container8 .container9 .container-left2 {
+    background-image: url(/imagens/bg-barsi.webp);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    width: 50%;
+    float: left;
+}
+
+main .pub-alvo .container7 .container8 .container9 .container-left2 h2 {
+    font-family: var(--fonte3);
+    color: var(--cor0);
+    font-size: 40px;
+    line-height: 52px;
+    color: var(--cor0);
+    width: 100%;
+    max-width: 470px;
+    margin-left: 8px;
+}
+
+main .pub-alvo .container7 .container8 .container9 .container-right2 {
+    font-family: var(--fonte2);
+    width: 50%;
+    float: right;
+    color: var(--cor0);
+}
+
+main .pub-alvo .container7 .container8 .container9 .container-right2 ul {
+    list-style: none;
+    width: 100%;
+    max-width: 546px;
+    margin: auto;
+}
+
+main .pub-alvo .container7 .container8 .container9 .container-right2 ul li {
+    background-image: url(../imagens/icon-barsi.webp);
+    background-position: left top;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+}
+
+main .pub-alvo .container7 .container8 .container9 .container-right2 ul li p {
+    font-family: var(--fonte1);
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--cor0);
+    padding-left: 70px;
+}
+
+main .pub-alvo .container7 .container8 .container9 .container-right2 .button {
+    font-family: var(--fonte3);
+    background: #3dffa8;
+    box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 27px;
+    color: #0f1014;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 10px;
+    margin: 32px auto 80px;
+    transition: all .3s ease-in;
+    border: 1px solid #3dffa8;
+    cursor: pointer;
+    width: 100%;
+    max-width: 546px;
+    display: table;
+}
+
+main .pub-alvo .container7 .container8 .container9 .container-right2 .button:hover {
+    transition: all .3s ease-in;
+    color: #3dffa8;
+    border: 1px solid #3dffa8;
+    background: #000;
+    background: -moz-linear-gradient(277deg, #000 0, #000 100%);
+    background: -webkit-linear-gradient(277deg, #000 0, #000 100%);
+    background: linear-gradient(277deg, #000 0, #000 100%);
+}
+
+main .barsi {
+    display: block;
+}
+
+main .barsi .container10 {
+    padding: 100px 12px 30px 12px;
+}
+
+main .barsi .container10 .container11 {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+main .barsi .container10 .container11 .container12 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .barsi .container10 .container11 .container12 h2 {
+    font-family: var(--fonte3);
+    font-size: 48px;
+    line-height: 52px;
+    color: var(--cor0);
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto 55px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main .barsi .container10 .container11 .container13 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .barsi .container10 .container11 .container13 .container-left3 {
+    float: left;
+    width: 33.33333333%;
+}
+
+main .barsi .container10 .container11 .container13 .container-left3 .imagem4 {
+    float: left;
+    width: 356px;
+    height: 375.688px;
+    margin: 0px 11.5px 0px;
+}
+
+main .barsi .container10 .container11 .container13 .container-right3 {
+    float: right;
+    width: 66.66666667%;
+}
+
+main .barsi .container10 .container11 .container13 .container-right3 h3 {
+    background-image: url(../imagens/bg-titulo-time.webp);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: var(--fonte3);
+    font-size: 32px;
+    line-height: 45px;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    color: #3dffa8;
+    padding: 10px 25px;
+    margin: 0px auto 30px;
+    width: 100%;
+    max-width: 736px;
+}
+
+main .barsi .container10 .container11 .container13 .container-right3 p {
+    font-family: var(--fonte1);
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    margin: 0px auto 20px;
+    width: 100%;
+    max-width: 736px;
+}
+
+main .professores {
+    display: block;
+}
+
+main .professores .container14 {
+    padding-top: 0;
+    padding-bottom: 100px;
+}
+
+main .professores .container14 .container15 {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+main .professores .container14 .container15 .container16 {
+    justify-content: center !important;
+}
+
+main .professores .container14 .container15 .container16 .container17 {
+    width: 100%;
+    padding: 0px 12px;
+}
+
+main .professores .container14 .container15 .container16 .container17 img {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin-bottom: -145px;
+}
+
+main .professores .container14 .container15 .container18 {
+    display: flex;
+    justify-content: center !important;
+}
+
+main .professores .container14 .container15 .container18 .coluna {
+    width: 33.3333333333%;
+    padding: 0px 12px;
+}
+
+main .professores .container14 .container15 .container18 .coluna .container19 {
+    width: 100%;
+    max-width: 384px;
+    display: table;
+    margin: 0 auto;
+}
+
+main .professores .container14 .container15 .container18 .coluna .container19 h2 {
+    background-image: url(../imagens/bg-titulo-time.webp);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: var(--fonte3);
+    font-size: 32px;
+    line-height: 45px;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+}
+
+main .professores .container14 .container15 .container18 .coluna .container19 p {
+    font-family: var(--fonte1);
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+main .footer {
+    display: block;
+}
+
+main .footer .container20 {
+    background-color: #272932;
+    font-family: Exo, sans-serif;
+}
+
+main .footer .container20 .container21 {
+    width: 100%;
+    height: 100%;
+}
+
+main .footer .container20 .container21 .container22 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 96px;
+}
+
+main .footer .container20 .container21 .container22 .container23 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+
+main .footer .container20 .container21 .container22 .container23 .imagem5 {
+    text-align: center;
+    width: 250px;
+    height: auto;
+    padding: 40px 0;
+    margin: 0 auto;
+    display: block;
+}
+
+main .footer .container20 .container21 .container22 .container24 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+}
+
+main .footer .container20 .container21 .container22 .container24 p {
+    font-family: Exo, sans-serif;
+    font-size: 16px;
+    line-height: 17px;
+    text-align: center;
+    color: #fff;
+    margin: 27px 0 0 0;
+}
+
+footer#rodape {
+    background-color: var(--cor8);
+    color: var(--cor7);
+    text-align: center;
+    font-family: var(--fonte1);
+    font-size: 14px;
+    height: 100%;
+    padding: 5px;
+}
+
+@media(max-width: 1199px) {
+
+    header .barra-cronometro .container1 {
+        max-width: 960px;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador {
+        max-width: 587px;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont p#titulo-cronometro {
+        width: 225px;
+        margin-top: 27px;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont .newdiv .customcount {
+        font-size: 10px;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont .newdiv .customcount .numero {
+        font-size: 35px;
+    }
+
+    header .container2 {
+        background-image: url(../imagens/bg-topo.webp);
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 70px;
+        padding-bottom: 255px;
+        background-color: var(--cor2);
+        padding: 40px 0px 45px 0px;
+    }
+
+    header .container2 .caixa3 {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 100%;
+        max-width: 960px;
+    }
+
+    header .container2 .caixa3 .container-left p {
+        font-family: var(--fonte2);
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 49px 0px 0px 20.5px;
+    }
+
+    header .container2 .caixa3 .container-left img#imagem1 {
+        max-width: 170px;
+        height: auto;
+        margin-top: -7px;
+    }
+
+    header .container2 .caixa3 .container-left img#imagem2,
+    h1 {
+        margin-left: 20.5px;
+    }
+
+    header .container2 .caixa3 .container-left h1 {
+        max-width: 440px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario {
+        width: 444px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form button {
+        font-size: 16px;
+    }
+
+    main .conteudo .container3 h2 {
+        font-family: var(--fonte3);
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: 0.5px;
+        color: var(--cor0);
+        width: 100%;
+        max-width: 90%;
+        margin: 79px auto 49px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    main .conteudo .container3 .caixas {
+        max-width: 640px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo {
+        width: 280px;
+        margin: 0px 20px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item {
+        width: 280px;
+        height: 335px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item p.data {
+        width: 236px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item .imagem-agenda {
+        margin: 10px 80px 0px 80px;
+    }
+
+    main section .button {
+        margin: 32px auto 80px;
+    }
+
+    main .inscricao .container4 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        max-width: 960px;
+    }
+
+    main .pub-alvo .container7 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    main .pub-alvo .container7 .container8 {
+        width: 960px;
+        margin: auto;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-left2 h2 {
+        max-width: 456px;
+        margin-left: 10px;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 ul {
+        width: 456px;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 .button {
+        max-width: 456px;
+    }
+
+    main .barsi .container10 {
+        padding: 80px 12px 30px 12px;
+    }
+
+    main .barsi .container10 .container11 {
+        width: 100%;
+        max-width: 960px;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-left3 .imagem4 {
+        width: 295.884px;
+        height: 312.359px;
+        margin: 0px 11.5px 0px;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 h3 {
+        max-width: 616px;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 p {
+        max-width: 616px;
+    }
+
+    main .professores .container14 .container15 {
+        max-width: 960px;
+    }
+}
+
+@media(max-width: 991px) {
+    header .barra-cronometro {
+        height: 96px;
+    }
+
+    header .barra-cronometro .container1 {
+        max-width: 732px;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador {
+        max-width: 441px;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont p#titulo-cronometro {
+        font-size: 17px;
+        width: 110px;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador .conteudocont .newdiv {
+        margin: 18px 15px 0px 0px;
+    }
+
+    header .container2 {
+        background-image: url(../imagens/bg-topo.webp);
+        background-position: 68% center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: var(--cor2);
+    }
+
+    header .container2 .caixa3 {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 100%;
+        max-width: 686px;
+    }
+
+    header .container2 .caixa3 .container-left p {
+        font-family: var(--fonte2);
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 49px 0px 0px 8.5px;
+    }
+
+    header .container2 .caixa3 .container-left img#imagem1 {
+        max-width: 130px;
+        height: auto;
+        margin-top: -7px;
+    }
+
+    header .container2 .caixa3 .container-left img#imagem2,
+    h1 {
+        margin-left: 8.5px;
+    }
+
+    header .container2 .caixa3 .container-left h1 {
+        font-family: var(--fonte2);
+        font-size: 20px;
+        width: 100%;
+        max-width: 318px;
+        line-height: 24px;
+        margin-bottom: 28px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario {
+        background: rgba(0, 0, 0, .6);
+        backdrop-filter: blur(16px);
+        border-radius: 16px;
+        padding: 45px;
+        width: 324px;
+        height: 100%;
+        margin: 0px 14px 0px 14px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario h2 {
+        font-family: var(--fonte3);
+        font-size: 17px;
+        line-height: 25px;
+        text-align: center;
+        color: var(--cor0);
+        margin-bottom: 22px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form input {
+        font-family: var(--fonte1);
+        background: #fff;
+        color: #000;
+        border: 0;
+        width: 100%;
+        padding: 6px;
+        font-size: 16px;
+        margin: 0 auto 20px;
+        display: table;
+        outline: 0;
+        border-radius: 6px;
+    }
+
+    main .conteudo .container3 h2 {
+        font-family: var(--fonte3);
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: 0.5px;
+        color: var(--cor0);
+        width: 100%;
+        max-width: 90%;
+        margin: 59px auto 49px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    main .conteudo .container3 .caixas {
+        max-width: 600px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo {
+        background-image: url(../imagens/bg-agenda.webp);
+        width: 261px;
+        display: table;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+        border-radius: 6px;
+        margin: 0px 12px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item {
+        width: 276px;
+        height: 335px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item p.data {
+        font-family: var(--fonte3);
+        background: linear-gradient(137deg, #03120b 15%, #268f5f 49%, #03120b 85%);
+        border: 0.5px solid rgba(255, 255, 255, .3);
+        border-radius: 2px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        width: 85%;
+        margin: 20px auto 0;
+        display: table;
+        text-align: center;
+        padding: 10px;
+        width: 235px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item p .imagem-calendario {
+        vertical-align: middle;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item .imagem-agenda {
+        display: block;
+        margin: 10px auto 10px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item h2 {
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        color: #fff;
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item p {
+        font-family: var(--fonte1);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        letter-spacing: .01em;
+        color: #fff;
+        margin: 15px auto 34px;
+        max-width: 85%;
+    }
+
+    main section .button {
+        font-family: var(--fonte3);
+        width: 90%;
+        max-width: 592px;
+        background: #3dffa8;
+        box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+        border-radius: 10px;
+        font-size: 20px;
+        line-height: 27px;
+        color: #0f1014;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 10px;
+        display: block;
+        margin: 32px auto 60px;
+        transition: all .3s ease-in;
+        border: 1px solid #3dffa8;
+        cursor: pointer;
+    }
+
+    main section .button:hover {
+        transition: all .3s ease-in;
+        color: #3dffa8;
+        border: 1px solid #3dffa8;
+        background: #000;
+        background: -moz-linear-gradient(277deg, #000 0, #000 100%);
+        background: -webkit-linear-gradient(277deg, #000 0, #000 100%);
+        background: linear-gradient(277deg, #000 0, #000 100%);
+    }
+
+    main .inscricao {
+        display: block;
+    }
+
+    main .inscricao .container4 {
+        padding: 60px 0px;
+        max-width: 720px;
+    }
+
+    main .inscricao .container4 .container-background {
+        background-image: url(../imagens/bg-aula-magna.webp);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 16px;
+    }
+
+    main .inscricao .container4 .container5 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .inscricao .container4 .container5 .container6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    main .inscricao .container4 .container5 .container6 .imagem3 {
+        display: table;
+        margin: 0 auto;
+    }
+
+    main .inscricao .container4 .container5 .container6 p {
+        font-family: var(--fonte3);
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        text-align: center;
+        color: #fff;
+        width: 80%;
+        max-width: 557px;
+        margin: 20px auto 30px;
+    }
+
+    main .inscricao .container4 .container5 .container6 .button {
+        font-family: var(--fonte3);
+        width: 90%;
+        max-width: 592px;
+        background: #bd2475;
+        box-shadow: 0 100px 80px rgb(189 36 117 / 18%), 0 41.7776px 33.4221px rgb(189 36 117 / 13%), 0 22.3363px 17.869px rgb(189 36 117 / 11%), 0 12.5216px 10.0172px rgb(189 36 117 / 9%), 0 6.6501px 5.32008px rgb(189 36 117 / 7%), 0 2.76726px 2.21381px rgb(189 36 117 / 5%);
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        color: #ffff;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 10px;
+        margin: 32px auto 80px;
+        transition: all .3s ease-in;
+        border: 1px solid #bd2475;
+        cursor: pointer;
+        width: 100%;
+        display: table;
+    }
+
+    main .inscricao .container4 .container5 .container6 .button:hover {
+        transition: all .3s ease-in;
+        color: #3dffa8;
+        border: 1px solid #3dffa8;
+        background: #000;
+        background: -moz-linear-gradient(277deg, #000 0, #000 100%);
+        background: -webkit-linear-gradient(277deg, #000 0, #000 100%);
+        background: linear-gradient(277deg, #000 0, #000 100%);
+    }
+
+    main .pub-alvo {
+        display: block;
+    }
+
+    main .pub-alvo .container7 {
+        padding: 60px 0px;
+    }
+
+    main .pub-alvo .container7 .container8 {
+        width: 720px;
+        margin: auto;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-left2 {
+        background-image: url(/imagens/bg-barsi.webp);
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        width: 50%;
+        float: left;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-left2 h2 {
+        font-family: var(--fonte3);
+        color: var(--cor0);
+        font-size: 40px;
+        line-height: 52px;
+        color: var(--cor0);
+        width: 100%;
+        max-width: 336px;
+        display: block;
+        margin: auto;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 {
+        font-family: var(--fonte2);
+        width: 50%;
+        float: right;
+        color: var(--cor0);
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 ul {
+        list-style: none;
+        width: 336px;
+        margin: auto;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 ul li {
+        background-image: url(../imagens/icon-barsi.webp);
+        background-position: left top;
+        background-repeat: no-repeat;
+        margin-bottom: 40px;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 ul li p {
+        font-family: var(--fonte1);
+        font-size: 24px;
+        line-height: 34px;
+        color: var(--cor0);
+        padding-left: 70px;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 .button {
+        font-family: var(--fonte3);
+        background: #3dffa8;
+        box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+        border-radius: 10px;
+        font-size: 20px;
+        line-height: 27px;
+        color: #0f1014;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 10px;
+        margin: 32px auto 80px;
+        transition: all .3s ease-in;
+        border: 1px solid #3dffa8;
+        cursor: pointer;
+        width: 100%;
+        max-width: 336px;
+        display: table;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 .button:hover {
+        transition: all .3s ease-in;
+        color: #3dffa8;
+        border: 1px solid #3dffa8;
+        background: #000;
+        background: -moz-linear-gradient(277deg, #000 0, #000 100%);
+        background: -webkit-linear-gradient(277deg, #000 0, #000 100%);
+        background: linear-gradient(277deg, #000 0, #000 100%);
+    }
+
+    main .barsi {
+        display: block;
+    }
+
+    main .barsi .container10 {
+        padding: 60px 12px 30px 12px;
+    }
+
+    main .barsi .container10 .container11 {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    main .barsi .container10 .container11 .container12 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .barsi .container10 .container11 .container12 h2 {
+        font-family: var(--fonte3);
+        font-size: 48px;
+        line-height: 52px;
+        color: var(--cor0);
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto 55px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    main .barsi .container10 .container11 .container13 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-left3 {
+        float: left;
+        width: 33.33333333%;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-left3 .imagem4 {
+        float: left;
+        width: 216px;
+        height: 227.938px;
+        margin: 0px 11.5px 0px;
+        display: block;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 {
+        float: right;
+        width: 66.66666667%;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 h3 {
+        background-image: url(../imagens/bg-titulo-time.webp);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-family: var(--fonte3);
+        font-size: 32px;
+        line-height: 45px;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        color: #3dffa8;
+        padding: 10px 25px;
+        margin: 0px auto 30px;
+        max-width: 456px;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 p {
+        font-family: var(--fonte1);
+        font-size: 18px;
+        line-height: 23px;
+        color: #fff;
+        margin: 0px auto 15px;
+        max-width: 456px;
+    }
+
+    main .professores {
+        display: block;
+    }
+
+    main .professores .container14 {
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+
+    main .professores .container14 .container15 {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    main .professores .container14 .container15 .container16 {
+        justify-content: center !important;
+    }
+
+    main .professores .container14 .container15 .container16 .container17 {
+        width: 100%;
+        padding: 0px 12px;
+    }
+
+    main .professores .container14 .container15 .container16 .container17 img {
+        width: 100%;
+        max-width: 1220px;
+        height: auto;
+        margin-bottom: -105px;
+    }
+
+    main .professores .container14 .container15 .container18 {
+        display: flex;
+        justify-content: center !important;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna {
+        width: 33.3333333333%;
+        padding: 0px 12px;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna .container19 {
+        width: 100%;
+        max-width: 384px;
+        display: table;
+        margin: 0 auto;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna .container19 h2 {
+        background-image: url(../imagens/bg-titulo-time.webp);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-family: var(--fonte3);
+        font-size: 21px;
+        line-height: 35px;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 25px;
+        margin-bottom: 15px;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna .container19 p {
+        font-family: var(--fonte1);
+        font-size: 18px;
+        line-height: 24px;
+        color: #fff;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    main .footer {
+        display: block;
+    }
+
+    main .footer .container20 {
+        background-color: #272932;
+        font-family: Exo, sans-serif;
+    }
+
+    main .footer .container20 .container21 {
+        width: 100%;
+        height: 100%;
+    }
+
+    main .footer .container20 .container21 .container22 {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px 14px;
+    }
+
+    main .footer .container20 .container21 .container22 .container23 {
+        flex: 0 0 auto;
+        width: 34.33333333%;
+    }
+
+    main .footer .container20 .container21 .container22 .container23 .imagem5 {
+        text-align: center;
+        width: 250px;
+        height: auto;
+        padding: 40px 0;
+        margin: 0 auto;
+        display: block;
+    }
+
+    main .footer .container20 .container21 .container22 .container24 {
+        flex: 0 0 auto;
+        width: 64.66666667%;
+    }
+
+    main .footer .container20 .container21 .container22 .container24 p {
+        font-family: Exo, sans-serif;
+        font-size: 16px;
+        line-height: 17px;
+        text-align: center;
+        color: #fff;
+        margin: 27px 0 0 0;
+    }
+}
+
+@media(max-width: 767px) {
+    header .barra-cronometro {
+        background-color: rgb(5, 7, 11);
+        border: none;
+        height: 64.578px;
+    }
+
+    header .barra-cronometro .container1 {
+        max-width: 270px;
+        height: auto;
+    }
+
+    header .barra-cronometro .container1 .caixa1 {
+        align-items: center;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .logo {
+        width: auto;
+        display: table;
+        margin: auto;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .logo img {
+        width: 100%;
+        display: block;
+        margin: 16px auto;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .box-contador {
+        display: none;
+    }
+
+    header .container2 {
+        background-image: url(../imagens/bg-topo.webp);
+        background-position: 68% center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 70px;
+        padding-bottom: 40px;
+        background-color: var(--cor2);
+    }
+
+    header .container2 .caixa3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 100%;
+        max-width: 540px;
+        margin-top: -30px;
+    }
+
+    header .container2 .caixa3 .container-left {
+        width: 100%;
+        float: none;
+        color: var(--cor0);
+    }
+
+    header .container2 .caixa3 .container-left p {
+        display: none;
+    }
+
+    header .container2 .caixa3 .container-left img#imagem2 {
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 0px auto 18px;
+    }
+
+    header .container2 .caixa3 .container-left h1 {
+        font-family: var(--fonte2);
+        font-size: 18px;
+        line-height: 27px;
+        margin: 0px auto 25px;
+        text-align: justify;
+        display: block;
+        max-width: 490px;
+    }
+
+    header .container2 .caixa3 .container-left h1 span {
+        font-family: var(--fonte3);
+    }
+
+    header .container2 .caixa3 .container-right {
+        width: 100%;
+        float: none;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario {
+        background: rgba(0, 0, 0, .6);
+        backdrop-filter: blur(16px);
+        border-radius: 16px;
+        padding: 45px;
+        width: 487px;
+        height: 100%;
+        margin: auto;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario h2 {
+        font-family: var(--fonte3);
+        font-size: 17px;
+        line-height: 25px;
+        text-align: center;
+        color: var(--cor0);
+        margin-bottom: 22px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form input {
+        font-family: var(--fonte1);
+        background: #fff;
+        color: #000;
+        border: 0;
+        width: 100%;
+        padding: 7.5px;
+        font-size: 16px;
+        margin: 0 auto 20px;
+        display: table;
+        outline: 0;
+        border-radius: 6px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form button {
+        font-family: var(--fonte5);
+        font-size: 17px;
+        color: var(--cor6);
+        line-height: 20px;
+        letter-spacing: .01em;
+        text-align: center;
+        background: #3dffa8;
+        background: linear-gradient(90deg, #3dffa8 0, #3dffa8 100%);
+        letter-spacing: .01em;
+        box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+        border-radius: 6px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 5px;
+        cursor: pointer;
+        margin: 20px auto 10px;
+        border: 1px solid #3dffa8;
+        width: 100%;
+        transition: all .2s ease-in;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form button:hover {
+        transition: all 200ms ease-in 0ms;
+        color: #3dffa8;
+        border: 1px solid #3dffa8;
+        background: #000;
+        background: linear-gradient(277deg, #000 0, #000 100%);
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form p {
+        font-family: var(--fonte1);
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+        margin: 15px auto 0;
+        line-height: 18px;
+        width: 100%;
+        max-width: 430px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form p a.stylelink {
+        color: #aeb8cd;
+        text-align: center;
+        font-size: 11px;
+        cursor: pointer;
+    }
+
+    header .box-contador#box-contador-mobile {
+        display: block;
+        background-color: #05070b;
+        width: 100%;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont p#titulo-cronometro {
+        font-family: var(--fonte1);
+        color: var(--cor3);
+        font-size: 17px;
+        line-height: 20px;
+        text-align: center;
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv {
+        width: auto;
+        display: flex;
+        float: none;
+        width: 284px;
+        margin: 0px auto 0px;
+        padding-bottom: 20px;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv .customcount {
+        font-family: var(--fonte2);
+        font-size: 11px;
+        text-transform: uppercase;
+        color: var(--cor5);
+        width: 100%;
+        text-align: center;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv .customcount .texttimer {
+        margin-top: -7px;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv .customcount .numero {
+        font-family: var(--fonte3);
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        color: var(--cor5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 3px;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv .pinkdot {
+        display: inline-block;
+        background-color: var(--cor4);
+        width: 26px;
+        height: 7px;
+        border-radius: 2px;
+        margin: 24px 0px 0px 0px;
+    }
+
+    main .conteudo .container3 {
+        padding-top: 30px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        width: 100%;
+        max-width: 511px;
+        margin: auto;
+        background: #237050;
+        background: -moz-linear-gradient(180deg, rgba(35, 112, 80, .965219) 0, rgba(21, 57, 45, .920401) 10%, rgba(15, 16, 20, .749533) 57%);
+        background: -webkit-linear-gradient(180deg, rgba(35, 112, 80, .965219) 0, rgba(21, 57, 45, .920401) 10%, rgba(15, 16, 20, .749533) 57%);
+        background: linear-gradient(180deg, rgba(35, 112, 80, .965219) 0, rgba(21, 57, 45, .920401) 10%, rgba(15, 16, 20, .749533) 57%);
+    }
+
+    main .conteudo .container3 h2 {
+        font-family: var(--fonte3);
+        font-size: 48px;
+        line-height: 50px;
+        letter-spacing: 0.5px;
+        color: var(--cor0);
+        width: 100%;
+        max-width: 90%;
+        margin: 0px auto 49px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    main .conteudo .container3 .caixas {
+        margin: 5px auto 0px;
+        width: 100%;
+        max-width: 511px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo {
+        background-image: url(../imagens/bg-agenda.webp);
+        width: 100%;
+        max-width: 270px;
+        display: table;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+        border-radius: 6px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item {
+        width: 100%;
+        max-width: 280px;
+        height: 364px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item p.data {
+        font-family: var(--fonte3);
+        background: linear-gradient(137deg, #03120b 15%, #268f5f 49%, #03120b 85%);
+        border: 0.5px solid rgba(255, 255, 255, .3);
+        border-radius: 2px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        width: 85%;
+        margin: 20px auto 0;
+        display: table;
+        text-align: center;
+        padding: 10px;
+        width: 238px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item p .imagem-calendario {
+        vertical-align: middle;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item .imagem-agenda {
+        display: block;
+        margin: 10px auto 10px;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item h2 {
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        color: #fff;
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+
+    main .conteudo .container3 .caixas .caixaconteudo .item p {
+        font-family: var(--fonte1);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        letter-spacing: .01em;
+        color: #fff;
+        margin: 15px auto 34px;
+        max-width: 85%;
+    }
+
+    main section .button {
+        font-family: var(--fonte3);
+        width: 90%;
+        max-width: 350px;
+        background: #3dffa8;
+        box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+        border-radius: 10px;
+        font-size: 17px;
+        line-height: 27px;
+        color: #0f1014;
+        text-align: center;
+        text-decoration: none;
+        padding: 9px 10px;
+        display: block;
+        margin: 32px auto 49px;
+        transition: all .3s ease-in;
+        border: 1px solid #3dffa8;
+        cursor: pointer;
+    }
+
+    main section .button:hover {
+        transition: all .3s ease-in;
+        color: #3dffa8;
+        border: 1px solid #3dffa8;
+        background: #000;
+        background: -moz-linear-gradient(277deg, #000 0, #000 100%);
+        background: -webkit-linear-gradient(277deg, #000 0, #000 100%);
+        background: linear-gradient(277deg, #000 0, #000 100%);
+    }
+
+    main .inscricao {
+        display: block;
+    }
+
+    main .inscricao .container4 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: 0px 83px;
+        width: 100%;
+        max-width: 535px;
+        margin: auto;
+    }
+
+    main .inscricao .container4 .container-background {
+        background-image: url(../imagens/bg-aula-magna.webp);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 16px;
+    }
+
+    main .inscricao .container4 .container5 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .inscricao .container4 .container5 .container6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    main .inscricao .container4 .container5 .container6 .imagem3 {
+        display: table;
+        margin: 0 auto;
+    }
+
+    main .inscricao .container4 .container5 .container6 p {
+        font-family: var(--fonte3);
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        text-align: center;
+        color: #fff;
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto 30px;
+    }
+
+    main .inscricao .container4 .container5 .container6 .button {
+        font-family: var(--fonte3);
+        width: 90%;
+        max-width: 511px;
+        background: #bd2475;
+        box-shadow: 0 100px 80px rgb(189 36 117 / 18%), 0 41.7776px 33.4221px rgb(189 36 117 / 13%), 0 22.3363px 17.869px rgb(189 36 117 / 11%), 0 12.5216px 10.0172px rgb(189 36 117 / 9%), 0 6.6501px 5.32008px rgb(189 36 117 / 7%), 0 2.76726px 2.21381px rgb(189 36 117 / 5%);
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        color: #ffff;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 10px;
+        margin: 32px auto 59px;
+        transition: all .3s ease-in;
+        border: 1px solid #bd2475;
+        cursor: pointer;
+        width: 100%;
+        display: table;
+    }
+
+    main .inscricao .container4 .container5 .container6 .button:hover {
+        transition: all .3s ease-in;
+        color: #3dffa8;
+        border: 1px solid #3dffa8;
+        background: #000;
+        background: -moz-linear-gradient(277deg, #000 0, #000 100%);
+        background: -webkit-linear-gradient(277deg, #000 0, #000 100%);
+        background: linear-gradient(277deg, #000 0, #000 100%);
+    }
+
+    main .pub-alvo {
+        display: block;
+    }
+
+    main .pub-alvo .container7 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    main .pub-alvo .container7 .container8 {
+        width: 100%;
+        max-width: 535px;
+        margin: auto;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: none;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-left2 {
+        background-image: none;
+        width: 100%;
+        float: none;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-left2 h2 {
+        font-family: var(--fonte3);
+        color: var(--cor0);
+        font-size: 40px;
+        line-height: 52px;
+        color: var(--cor0);
+        width: 100%;
+        max-width: 470px;
+        margin: 0px 0px 28px 12px;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 {
+        font-family: var(--fonte2);
+        width: 100%;
+        float: none;
+        color: var(--cor0);
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 ul {
+        list-style: none;
+        width: 100%;
+        max-width: 511px;
+        margin: auto;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 ul li {
+        background-image: url(../imagens/icon-barsi.webp);
+        background-position: left top;
+        background-repeat: no-repeat;
+        margin-bottom: 40px;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 ul li p {
+        font-family: var(--fonte1);
+        font-size: 24px;
+        line-height: 34px;
+        color: var(--cor0);
+        padding-left: 70px;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 .button {
+        font-family: var(--fonte3);
+        background: #3dffa8;
+        box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+        border-radius: 10px;
+        font-size: 20px;
+        line-height: 27px;
+        color: #0f1014;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px 10px;
+        margin: 32px auto 60px;
+        transition: all .3s ease-in;
+        border: 1px solid #3dffa8;
+        cursor: pointer;
+        width: 100%;
+        max-width: 511px;
+        display: table;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 .button:hover {
+        transition: all .3s ease-in;
+        color: #3dffa8;
+        border: 1px solid #3dffa8;
+        background: #000;
+        background: -moz-linear-gradient(277deg, #000 0, #000 100%);
+        background: -webkit-linear-gradient(277deg, #000 0, #000 100%);
+        background: linear-gradient(277deg, #000 0, #000 100%);
+    }
+
+    main .barsi {
+        display: block;
+    }
+
+    main .barsi .container10 {
+        padding: 50px 12px 30px 12px;
+    }
+
+    main .barsi .container10 .container11 {
+        max-width: 535px;
+        margin: auto;
+    }
+
+    main .barsi .container10 .container11 .container12 h2 {
+        font-family: var(--fonte3);
+        font-size: 48px;
+        line-height: 52px;
+        color: var(--cor0);
+        width: 100%;
+        max-width: 90%;
+        margin: 0px auto 0px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    main .barsi .container10 .container11 .container13 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-left3 {
+        float: none;
+        width: 100%;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-left3 .imagem4 {
+        float: none;
+        width: 488px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 {
+        float: none;
+        width: 100%;
+        margin-top: -90px;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 h3 {
+        background-image: url(../imagens/bg-titulo-time.webp);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-family: var(--fonte3);
+        font-size: 32px;
+        line-height: 45px;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        color: #3dffa8;
+        padding: 10px 25px;
+        margin: 0px auto 30px;
+        max-width: 511px;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 p {
+        font-family: var(--fonte1);
+        font-size: 18px;
+        line-height: 23px;
+        color: #fff;
+        margin: 0px auto 15px;
+        max-width: 511px;
+    }
+
+    main .professores {
+        display: block;
+    }
+
+    main .professores .container14 {
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+
+    main .professores .container14 .container15 {
+        max-width: 535px;
+        margin: auto;
+    }
+
+    main .professores .container14 .container15 .container16 {
+        justify-content: center !important;
+    }
+
+    main .professores .container14 .container15 .container16 .container17 {
+        width: 100%;
+        max-width: 535px;
+        padding: 0px 12px;
+    }
+
+    main .professores .container14 .container15 .container16 .container17 img {
+        width: 100%;
+        max-width: 535px;
+        height: auto;
+        margin-bottom: -81px;
+    }
+
+    main .professores .container14 .container15 .container18 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna {
+        width: 100%;
+        max-width: 535px;
+        padding: 0px 12px;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna .container19 {
+        width: 100%;
+        max-width: 516px;
+        display: table;
+        margin: 0px auto 30px;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna .container19 h2 {
+        background-image: url(../imagens/bg-titulo-time.webp);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-family: var(--fonte3);
+        font-size: 21px;
+        line-height: 35px;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 25px;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 516px;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna .container19 p {
+        font-family: var(--fonte1);
+        font-size: 18px;
+        line-height: 24px;
+        color: #fff;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    main .footer {
+        display: block;
+    }
+
+    main .footer .container20 {
+        background-color: #272932;
+        font-family: Exo, sans-serif;
+    }
+
+    main .footer .container20 .container21 {
+        width: 100%;
+        height: 100%;
+    }
+
+    main .footer .container20 .container21 .container22 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .footer .container20 .container21 .container22 .container23 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    main .footer .container20 .container21 .container22 .container23 .imagem5 {
+        text-align: center;
+        width: 250px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        padding: 25px 0px 15px 0px;
+    }
+
+    main .footer .container20 .container21 .container22 .container24 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    main .footer .container20 .container21 .container22 .container24 p {
+        font-family: Exo, sans-serif;
+        font-size: 16px;
+        line-height: 17px;
+        text-align: center;
+        color: #fff;
+        margin: 10px 0px 0px 0px;
+    }
+}
+
+@media(max-width: 575px) {
+
+    header .barra-cronometro {
+        height: 61px;
+    }
+
+    header .barra-cronometro .container1 {
+        width: 100%;
+        max-width: 270px;
+        margin: auto;
+    }
+
+    header .barra-cronometro .container1 .caixa1 {
+        align-items: center;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .logo {
+        width: auto;
+        display: table;
+        float: left;
+        margin: auto;
+    }
+
+    header .barra-cronometro .container1 .caixa1 .caixa2 .logo img {
+        width: 94.5%;
+        display: block;
+        margin: 16px auto;
+    }
+
+    header .container2 {
+        background-image: url(../imagens/bg-topo-mobili3.webp);
+        background-size: 350px;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-color: #05070b;
+        padding-bottom: 360px;
+        padding-top: 10px;
+    }
+
+    header .container2 .caixa3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 100%;
+        max-width: 540px;
+        margin-top: -30px;
+    }
+
+    header .container2 .caixa3 .container-left {
+        width: 100%;
+        float: none;
+        color: var(--cor0);
+    }
+
+    header .container2 .caixa3 .container-left p {
+        display: none;
+    }
+
+    header .container2 .caixa3 .container-left img#imagem2 {
+        max-width: 160px;
+        height: auto;
+        display: block;
+        margin: 0px auto 18px;
+    }
+
+    header .container2 .caixa3 .container-left h1 {
+        font-family: var(--fonte2);
+        font-size: 14px;
+        line-height: 22px;
+        margin: 10px auto 10px;
+        padding: 0px 20px;
+        text-align: justify;
+        display: block;
+        max-width: 540px;
+    }
+
+    header .container2 .caixa3 .container-left h1 span {
+        font-family: var(--fonte3);
+    }
+
+    header .container2 .caixa3 .container-right {
+        width: 100%;
+        float: none;
+        padding: 20px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario {
+        background-color: #0e0e0e;
+        backdrop-filter: blur(16px);
+        border-radius: 16px;
+        padding: 25px;
+        width: 100%;
+        max-width: 486px;
+        height: 100%;
+        margin: auto;
+        margin-top: -15px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario h2 {
+        font-family: var(--fonte3);
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: var(--cor0);
+        margin-bottom: 22px;
+        margin-top: 5px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form input {
+        font-family: var(--fonte1);
+        background: #fff;
+        color: #000;
+        border: 0;
+        width: 100%;
+        padding: 7.5px;
+        font-size: 16px;
+        margin: 0 auto 20px;
+        display: table;
+        outline: 0;
+        border-radius: 6px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form button {
+        font-family: var(--fonte5);
+        font-size: 11px;
+        color: var(--cor6);
+        line-height: 21px;
+        letter-spacing: .01em;
+        text-align: center;
+        background: #3dffa8;
+        background: linear-gradient(90deg, #3dffa8 0, #3dffa8 100%);
+        letter-spacing: .01em;
+        box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+        border-radius: 6px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 5px;
+        cursor: pointer;
+        margin: 20px auto 10px;
+        border: 1px solid #3dffa8;
+        width: 100%;
+        transition: all .2s ease-in;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form button:hover {
+        transition: all 200ms ease-in 0ms;
+        color: #3dffa8;
+        border: 1px solid #3dffa8;
+        background: #000;
+        background: linear-gradient(277deg, #000 0, #000 100%);
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form p {
+        font-family: var(--fonte1);
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+        margin: 15px auto 0;
+        line-height: 18px;
+        width: 100%;
+        max-width: 430px;
+    }
+
+    header .container2 .caixa3 .container-right .box-formulario form p a.stylelink {
+        color: #aeb8cd;
+        text-align: center;
+        font-size: 11px;
+        cursor: pointer;
+    }
+
+    header .box-contador#box-contador-mobile {
+        display: block;
+        background-color: #05070b;
+        width: 100%;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont p#titulo-cronometro {
+        font-family: var(--fonte1);
+        color: var(--cor3);
+        font-size: 17px;
+        line-height: 20px;
+        text-align: center;
+        width: 100%;
+        padding: 0px 0px;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv {
+        width: auto;
+        display: flex;
+        float: none;
+        width: 284px;
+        margin: 0px auto 0px;
+        padding-bottom: 20px;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv .customcount {
+        font-family: var(--fonte2);
+        font-size: 10px;
+        text-transform: uppercase;
+        color: var(--cor5);
+        width: 100%;
+        text-align: center;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv .customcount .texttimer {
+        margin-top: -7px;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv .customcount .numero {
+        font-family: var(--fonte3);
+        width: 100%;
+        text-align: center;
+        font-size: 33px;
+        color: var(--cor5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 3px;
+    }
+
+    header .box-contador#box-contador-mobile .conteudocont .newdiv .pinkdot {
+        display: inline-block;
+        background-color: var(--cor4);
+        width: 26px;
+        height: 7px;
+        border-radius: 2px;
+        margin: 24px 0px 0px 0px;
+    }
+
+    main .conteudo {
+        padding: 0px 20px;
+    }
+
+    main .conteudo .container3 h2 {
+        font-family: var(--fonte3);
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: var(--cor0);
+        width: 100%;
+        max-width: 90%;
+        margin: 0px auto 49px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    main section .button {
+        font-family: var(--fonte3);
+        width: 90%;
+        max-width: 350px;
+        background: #3dffa8;
+        box-shadow: 0 100px 80px rgb(61 255 168 / 18%), 0 41.7776px 33.4221px rgb(61 255 168 / 13%), 0 22.3363px 17.869px rgb(61 255 168 / 11%), 0 12.5216px 10.0172px rgb(61 255 168 / 9%), 0 6.6501px 5.32008px rgb(61 255 168 / 7%), 0 2.76726px 2.21381px rgb(61 255 168 / 5%);
+        border-radius: 10px;
+        font-size: 17px;
+        line-height: 27px;
+        color: #0f1014;
+        text-align: center;
+        text-decoration: none;
+        padding: 9px 10px;
+        display: block;
+        margin: 32px auto 30px;
+        transition: all .3s ease-in;
+        border: 1px solid #3dffa8;
+        cursor: pointer;
+    }
+
+    main .inscricao {
+        padding: 0px 10px;
+    }
+
+    main .inscricao .container4 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin: 0px 83px;
+        width: 100%;
+        max-width: 535px;
+        margin: auto;
+    }
+
+    main .inscricao .container4 .container-background {
+        background-position: unset;
+    }
+
+    main .inscricao .container4 .container5 .container6 {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    main .inscricao .container4 .container5 .container6 p {
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    main .pub-alvo .container7 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    main .pub-alvo {
+        padding: 0px 20px;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-left2 h2 {
+        font-size: 24px;
+        line-height: 31px;
+        margin: 0px 0px 28px 0px;
+    }
+
+    main .pub-alvo .container7 .container8 .container9 .container-right2 ul li p {
+        font-family: var(--fonte1);
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--cor0);
+        padding-left: 55px;
+    }
+
+    main .barsi {
+        padding: 0px 10px;
+    }
+
+    main .barsi .container10 {
+        padding: 30px 12px 20px 12px;
+    }
+
+    main .barsi .container10 .container11 .container12 h2 {
+        font-size: 24px;
+        line-height: 31px;
+        max-width: 220px;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-left3 .imagem4 {
+        width: 100%;
+        max-width: 488px;
+        margin: 0 auto -10px;
+        height: auto;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 h3 {
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 20px;
+    }
+
+    main .barsi .container10 .container11 .container13 .container-right3 p {
+        font-family: var(--fonte1);
+        font-size: 16px;
+        line-height: 20px;
+        color: #fff;
+        margin: 0px auto 10px;
+    }
+
+    main .professores {
+        padding: 0px 20px;
+    }
+
+    main .professores .container14 {
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+
+    main .professores .container14 .container15 .container16 .container17 img {
+        margin-bottom: -24px;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna .container19 {
+        width: 100%;
+        max-width: 516px;
+        display: table;
+        margin: 0px auto 20px;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna .container19 h2 {
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+
+    main .professores .container14 .container15 .container18 .coluna .container19 p {
+        font-family: var(--fonte1);
+        font-size: 16px;
+        line-height: 23px;
+        color: #fff;
+        margin-bottom: 7px;
+        text-align: left;
+    }
+
+    main .footer .container20 .container21 .container22 .container24 {
+        padding-bottom: 20px;
+    }
+
+    footer#rodape {
+        font-size: 10px;
+    }
+}
