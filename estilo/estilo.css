@@ -2059,7 +2059,6 @@ footer#rodape {
     main .pub-alvo .container7 .container8 .container9 {
         display: flex;
         flex-direction: column;
-        flex-wrap: none;
     }
 
     main .pub-alvo .container7 .container8 .container9 .container-left2 {
