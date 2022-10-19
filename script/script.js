@@ -39,42 +39,42 @@ var x = setInterval(function () {
 
 
 
-var countDownDate = new Date("Oct 31, 2022 8:59:59").getTime();
+// var countDownDate = new Date("Oct 31, 2022 8:59:59").getTime();
 
-var x = setInterval(function () {
+// var x = setInterval(function () {
 
-    var now = new Date().getTime();
+//     var now = new Date().getTime();
 
-    var distance = countDownDate - now;
+//     var distance = countDownDate - now;
 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if ((days + "").length === 1) {
-        days = "0" + days;
-    }
-    if ((hours + "").length === 1) {
-        hours = "0" + hours;
-    }
-    if ((minutes + "").length === 1) {
-        minutes = "0" + minutes;
-    }
-    if ((seconds + "").length === 1) {
-        seconds = "0" + seconds;
-    }
+//     if ((days + "").length === 1) {
+//         days = "0" + days;
+//     }
+//     if ((hours + "").length === 1) {
+//         hours = "0" + hours;
+//     }
+//     if ((minutes + "").length === 1) {
+//         minutes = "0" + minutes;
+//     }
+//     if ((seconds + "").length === 1) {
+//         seconds = "0" + seconds;
+//     }
 
-    document.getElementById("daysm").innerHTML = days;
-    document.getElementById("hoursm").innerHTML = hours;
-    document.getElementById("minutesm").innerHTML = minutes;
-    document.getElementById("secondsm").innerHTML = seconds;
+//     document.getElementById("daysm").innerHTML = days;
+//     document.getElementById("hoursm").innerHTML = hours;
+//     document.getElementById("minutesm").innerHTML = minutes;
+//     document.getElementById("secondsm").innerHTML = seconds;
 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-}, 1000);
+//     if (distance < 0) {
+//         clearInterval(x);
+//         document.getElementById("demo").innerHTML = "EXPIRED";
+//     }
+// }, 1000);
 
 
 
