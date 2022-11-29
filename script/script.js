@@ -1,4 +1,4 @@
-var countDownDate = new Date("Nov 30, 2022 8:59:59").getTime();
+var countDownDate = new Date("Dec 31, 2022 8:59:59").getTime();
 
 var x = setInterval(function () {
 
@@ -35,7 +35,7 @@ var x = setInterval(function () {
     }
 }, 1000);
 
-var countDownDate = new Date("Nov 30, 2022 8:59:59").getTime();
+var countDownDate = new Date("Dec 31, 2022 8:59:59").getTime();
 
 var x = setInterval(function () {
 
