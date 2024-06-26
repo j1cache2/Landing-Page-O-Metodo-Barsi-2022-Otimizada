@@ -1,4 +1,4 @@
-var countDownDate = new Date("June 31, 2024 8:59:59").getTime();
+var countDownDate = new Date("Jul 31, 2024 8:59:59").getTime();
 
 var x = setInterval(function () {
 
@@ -35,7 +35,7 @@ var x = setInterval(function () {
     }
 }, 1000);
 
-var countDownDate = new Date("June 31, 2024 8:59:59").getTime();
+var countDownDate = new Date("Jul 31, 2024 8:59:59").getTime();
 
 var x = setInterval(function () {
 
